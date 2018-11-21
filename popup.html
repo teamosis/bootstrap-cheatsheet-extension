@@ -5,33 +5,67 @@
 	<title>Document</title>
 	<style>
 		body {
-			width:500px;
+			width:300px;
 			padding:10px;
+		}
+		input {
+			text-indent:10px;
+			border-radius: 4px;
+			width: 100%;
+			outline:none;
+			font-size:16px;
+			font-weight: bold;
+			-webkit-appearance: none;
+			border-style: none;
+			border:1px solid #dedede;
+			height: 50px;
+			width: 100%;
 		}
 		ul {
 			padding:0;
+			list-style: none;
+		    display: flex;
+		    flex-direction: column;
+		    flex-grow: 1;
 		}
 		li {
+			/*background-color: #1E88E5;*/
+			/*color:#fff;*/
 			list-style: none;
 			margin-bottom:10px;
 			font-size:16px;
+			position: relative;
+		    display: flex;
+		    align-items: center;
+		    justify-content: space-between;
+		    flex-grow: 1;
+		    margin: 1px 0;
+		    padding: 15px 10px;
+		    text-transform: capitalize;
+		    border-radius: 0.25em;
+		    transition: -webkit-transform 250ms;
+		    transition: all 250ms;
+		    transition: all 250ms, -webkit-all 250ms;
+		    cursor: pointer;
+    	}
+		li:hover {
+			box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.11);
+			-webkit-transform: scale(1.02);
+    		transform: scale(1.02);
 		}
 		.tf-bs-heading {
-			background:#000;
+			background:#3F51B5;
 			color:#fff;
-			padding:10px;
+			padding:15px;
+			font-size:16px;
+			font-weight: bold;
+			border-radius: 3px;
 		}
-		li span
 
 		p {
 			cursor: pointer;
 			width:200px;
 			margin:0px;
-		}
-
-		input {
-			height: 50px;
-			width: 500px;
 		}
 
 		.category {
@@ -40,11 +74,8 @@
 		}
 
 		.title {
-			background-color: black;
+			background-color: #0D47A1;
 			color: white;
-		}
-		.bs-copy-code svg {
-			width: 10px;
 		}
 	</style>
 </head>
