@@ -26,6 +26,7 @@ function createCategories(categories) {
 
 			let spanIcon = document.createElement('span');
 			spanIcon.setAttribute("class", "bs-copy-code");
+			spanIcon.innerHTML = "Code copied" ;
 			listItem.appendChild(spanIcon);
 
 			// let imageCopy = document.createElement('img');
@@ -33,6 +34,8 @@ function createCategories(categories) {
 			
 			listItem.addEventListener("click", function() {
 				console.log(itm.title);
+				listItem.classList.add("code-copied");
+
 				// Copy text to clipboard
 				let copyText = document.createElement('textarea');
 				category.appendChild(copyText);
