@@ -31,10 +31,13 @@ function createCategories(categories) {
 
 			// let imageCopy = document.createElement('img');
 			// imageCopy.setAttribute("src", "")
-			
+			var previousSelected = listItem;
 			listItem.addEventListener("click", function() {
 				console.log(itm.title);
 				listItem.classList.add("code-copied");
+
+				previousSelected.classList.remove("code-copied");
+				previousSelected = listItem;
 
 				// Copy text to clipboard
 				let copyText = document.createElement('textarea');
