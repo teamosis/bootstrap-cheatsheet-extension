@@ -60,6 +60,7 @@
 			font-size:16px;
 			font-weight: bold;
 			border-radius: 3px;
+			text-transform: capitalize;
 		}
 
 		p {
@@ -94,11 +95,40 @@
 		    transform: translate(-50%, -50%);
 		    opacity: 0.75;
 		}
+		#search-items {
+			background: #fff;
+			padding:10px;
+			max-height:300px;
+			overflow: hidden;
+			position: absolute;
+			top:55px;
+			right: 0;
+			left: 0;
+			z-index: 99;
+			border:1px solid #dedede;
+
+		}
+		#search-items.hide {
+			display:none;
+		}
+		#search-items.show {
+			display:block;
+		}
+		.search-area {
+			position: relative;
+		}
+
 	</style>
 </head>
 <body>
-	<input placeholder="Search">
 	<div id="root">
+		<div class="search-area">
+			<input id="search-field" placeholder="Search">
+			<div id="search-items" class="hide">
+			</div>
+		</div>
+		<div id="list">
+		</div>
 	</div>
 </body>
 <script type="text/javascript" src="data.js"></script>
