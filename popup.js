@@ -127,8 +127,9 @@ function initSearch(categories) {
 		// TODO: if no result found then show a message
 		if(! found) {
 			let message = document.createElement("p");
-			message.innerHTML = "No result found for \"" + searchField.value + "\"";
-			//searchItems.removeChild(list);
+			message.classList.add('no-result-text');
+			message.innerHTML = "No result found for <strong> \"" + searchField.value + "\"</strong>";
+			searchItems.removeChild(list);
 			searchItems.appendChild(message);
 		}
 	}); 
