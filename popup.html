@@ -6,7 +6,8 @@
 	<style>
 		body {
 			width:300px;
-			padding:10px;
+			padding:20px;
+			margin: 0px;
 		}
 		input {
 			text-indent:10px;
@@ -100,6 +101,7 @@
 			padding:10px;
 			max-height:300px;
 			overflow: hidden;
+			//overflow-y: auto;
 			position: absolute;
 			top:55px;
 			right: 0;
@@ -116,6 +118,21 @@
 		}
 		.search-area {
 			position: relative;
+		}
+
+		.overlay{
+			position: relative;
+		}
+		.overlay::before{
+			position: absolute;
+			content: "";
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: #000;
+			opacity: .5;
+			z-index: 1;
 		}
 
 	</style>

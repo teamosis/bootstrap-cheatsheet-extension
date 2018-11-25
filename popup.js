@@ -1,6 +1,10 @@
-let search = document.getElementById('search-field');
+let searchField = document.getElementById('search-field');
 let searchItems = document.getElementById('search-items');
-let page = document.getElementById('list');
+let categoryList = document.getElementById('list');
+
+var searchResult = [];
+
+var previousCopied;
 
 function matched(query, str) {
 	if(str.search(query) >= 0)
@@ -14,18 +18,61 @@ function clearSearchList() {
 	}
 }
 
+function addClickListener(list, listItem, item) {
+	listItem.addEventListener("click", function() {
+		console.log(item.title);
+		listItem.classList.add("code-copied");
+
+		// removing the @code-copied class form the previousy copied item
+		// and making the current item as pervious item
+		previousCopied.classList.remove("code-copied");
+		previousCopied = listItem;
+
+		// Copy text to clipboard
+		let copyText = document.createElement('textarea');
+		list.appendChild(copyText);
+		copyText.value = item.code;
+		copyText.select();
+		document.execCommand("copy");
+		list.removeChild(copyText);
+	});
+}
+
+function addSearchItems(list, item) {
+	console.log(item.title);
+	let listItem = document.createElement('li');
+	listItem.setAttribute("class", "item-element");
+
+	// show the title of the code snippet
+	let spanTitle = document.createElement('span');
+	spanTitle.setAttribute("class", "item-element");
+	spanTitle.innerHTML = item.title;
+	listItem.appendChild(spanTitle);
+
+	// show the message "Code copied" when clicked
+	let spanText = document.createElement('span');
+	spanText.setAttribute("class", "bs-copy-code");
+	spanText.innerHTML = "Code copied";
+	listItem.appendChild(spanText);
+
+	addClickListener(list, listItem, item);
+
+	list.appendChild(listItem);
+} 
+
+
 /**
 * This function initializes the search operations
 */
 function initSearch(categories) {
-	search.addEventListener("focusin", function() {
+	searchField.addEventListener("focusin", function() {
 		console.log("Focus in!");
 	});
 
-	search.addEventListener("focusout", function() {
+	searchField.addEventListener("focusout", function() {
 		console.log("Focus out!");
 		// if search field is empty then reload all the categories
-		var str = search.value;
+		var str = searchField.value;
 		if(str == "") {
 			// back to normal
 			console.log("Empty -- ");
@@ -34,15 +81,19 @@ function initSearch(categories) {
 		}
 	});
 
-	search.addEventListener("keyup", function() {
+	searchField.addEventListener("keyup", function() {
 		clearSearchList();
-		var searchStr = search.value;
+		// initially there is no search result
+		var found = false;
+		var searchStr = searchField.value;
 		if(searchStr == "") {
 			// hide the search results
+			categoryList.classList.remove("overlay");
 			searchItems.classList.remove("show");
 			searchItems.classList.add("hide");
 		} else {
 			// show the search reslts
+			categoryList.classList.add("overlay");
 			searchItems.classList.remove("hide");
 			searchItems.classList.add("show");
 		}
@@ -55,52 +106,25 @@ function initSearch(categories) {
 		searchStr = searchStr.toLowerCase();
 		for(var ctg of categories) {
 			if(matched(searchStr, ctg.title)) {
+				found = true;
 				// show all the list items
 				for(var itm of ctg.items) {
-					console.log(itm.title);
-					let listItem = document.createElement('li');
-					listItem.setAttribute("class", "item-element");
-
-					// show the title of the code snippet
-					let spanTitle = document.createElement('span');
-					spanTitle.setAttribute("class", "item-element");
-					spanTitle.innerHTML = itm.title;
-					listItem.appendChild(spanTitle);
-
-					// show the message "Code copied" when clicked
-					let spanText = document.createElement('span');
-					spanText.setAttribute("class", "bs-copy-code");
-					spanText.innerHTML = "Code copied";
-					listItem.appendChild(spanText);
-
-					list.appendChild(listItem);
+					//searchResult.push(itm);
+					addSearchItems(list, itm);
 				}
 			} else {
 				// search in the list items
 				for(var itm of ctg.items) {
 					if(matched(searchStr, itm.title)) {
+						found = true;
 						// show the item
-						console.log(itm.title);
-						let listItem = document.createElement('li');
-						listItem.setAttribute("class", "item-element");
-
-						// show the title of the code snippet
-						let spanTitle = document.createElement('span');
-						spanTitle.setAttribute("class", "item-element");
-						spanTitle.innerHTML = itm.title;
-						listItem.appendChild(spanTitle);
-
-						// show the message "Code copied" when clicked
-						let spanText = document.createElement('span');
-						spanText.setAttribute("class", "bs-copy-code");
-						spanText.innerHTML = "Code copied";
-						listItem.appendChild(spanText);
-
-						list.appendChild(listItem);
+						//searchResult.push(itm);
+						addSearchItems(list, itm);
 					}
 				}
 			}
 		}
+		// TODO: if no result found then show a message
 	}); 
 }
 
@@ -137,30 +161,13 @@ function createCategories(categories) {
 			spanText.setAttribute("class", "bs-copy-code");
 			spanText.innerHTML = "Code copied";
 			listItem.appendChild(spanText);
-
 			// initializing variable to store the record of previously selected item
-			var previousCopied = listItem;
+			previousCopied = listItem;
 			// initializing click listener on listItem
-			listItem.addEventListener("click", function() {
-				console.log(itm.title);
-				listItem.classList.add("code-copied");
-
-				// removing the @code-copied class form the previousy copied item
-				// and making the current item as pervious item
-				previousCopied.classList.remove("code-copied");
-				previousCopied = listItem;
-
-				// Copy text to clipboard
-				let copyText = document.createElement('textarea');
-				category.appendChild(copyText);
-				copyText.value = itm.code;
-				copyText.select();
-				document.execCommand("copy");
-				category.removeChild(copyText);
-			});
+			addClickListener(list, listItem, itm);
 			list.appendChild(listItem);
 		}
-		page.appendChild(category);
+		categoryList.appendChild(category);
 	}
 }
 
