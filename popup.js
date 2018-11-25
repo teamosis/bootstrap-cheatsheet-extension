@@ -125,6 +125,12 @@ function initSearch(categories) {
 			}
 		}
 		// TODO: if no result found then show a message
+		if(! found) {
+			let message = document.createElement("p");
+			message.innerHTML = "No result found for \"" + searchField.value + "\"";
+			//searchItems.removeChild(list);
+			searchItems.appendChild(message);
+		}
 	}); 
 }
 
