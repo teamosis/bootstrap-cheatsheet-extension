@@ -68,20 +68,25 @@ function addClickListener(list, listItem, item) {
 * @return void
 */
 function addItemsInTheList(list, item) {
-	let listItem = document.createElement('li');
+	let listItem = document.createElement("li");
 	listItem.setAttribute("class", "item-element");
 
 	// show the title of the code snippet
-	let spanTitle = document.createElement('span');
+	let spanTitle = document.createElement("span");
 	spanTitle.setAttribute("class", "item-element");
 	spanTitle.innerHTML = item.title;
 	listItem.appendChild(spanTitle);
 
 	// show the message "Code copied" when clicked
-	let spanText = document.createElement('span');
+	let spanText = document.createElement("span");
 	spanText.setAttribute("class", "bs-copy-code");
 	spanText.innerHTML = "Code copied";
 	listItem.appendChild(spanText);
+
+	let spanIcon = document.createElement("span");
+	spanIcon.setAttribute("class", "code-copy-icon");
+	listItem.appendChild(spanIcon);
+
 	previousCopied = listItem;
 	addClickListener(list, listItem, item);
 
