@@ -1,6 +1,7 @@
 let searchField = document.getElementById('search-field');
 let searchItems = document.getElementById('search-items');
 let categoryList = document.getElementById('list');
+let preview = document.getElementById('preview');
 
 var searchResult = [];
 
@@ -62,6 +63,18 @@ function addClickListener(list, listItem, item) {
 }
 
 /**
+* This function adds mouse hover listener on every item
+* @param:list is a ul element (only for copy purpose)
+* @param:listItem is a li element where the click listener is attached
+* @param:item is data object of a single item
+*/
+function addHoverListener(listItem, item) {
+	listItem.addEventListener("mouseenter", function() {
+		preview.innerHTML = item.code;
+	});
+}
+
+/**
 * This function creates list items and adds them in the list
 * @param:list is the ul element
 * @param:item is the data object of a single item
@@ -89,6 +102,7 @@ function addItemsInTheList(list, item) {
 
 	previousCopied = listItem;
 	addClickListener(list, listItem, item);
+	addHoverListener(listItem, item);
 
 	list.appendChild(listItem);
 } 
