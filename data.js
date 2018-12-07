@@ -406,7 +406,7 @@ categories.push({
 		{
 			title: "card",
 			code: "<div class=\"card\">"
-			+"\r\n  <img class=\"card-img-top\" src=\"/images/pathToYourImage.png\" alt=\"Card image cap\">"
+			+"\r\n  <img class=\"card-img-top\" src=\"/assets/img-cap.png\" alt=\"Card image cap\">"
 			+"\r\n  <div class=\"card-body\">"
 			+"\r\n    <h4 class=\"card-title\">Card title</h4>"
 			+"\r\n    <p class=\"card-text\">"
@@ -494,7 +494,7 @@ categories.push({
 		{
 			title: "card-img-top",
 			code: "<div class=\"card\">"
-			+"\r\n  <img class=\"card-img-top\" src=\"/images/pathToYourImage.png\" alt=\"Card image cap\">"
+			+"\r\n  <img class=\"card-img-top\" src=\"/assets/img-cap.png\" alt=\"Card image cap\">"
 			+"\r\n  <div class=\"card-body\"> Some more card content </div>"
 			+"\r\n</div>"
 		},
@@ -505,7 +505,7 @@ categories.push({
 			+"\r\n  <div class=\"card-body\">"
 			+"\r\n    <p class=\"card-text\">This image is in the middle</p>"
 			+"\r\n  </div>"
-			+"\r\n  <img src=\"/images/pathToYourImage.png\" alt=\"Card image\">"
+			+"\r\n  <img src=\"/assets/img-cap.png\" alt=\"Card image\">"
 			+"\r\n  <div class=\"card-body\">"
 			+"\r\n    <p class=\"card-text\">of a card.</p>"
 			+"\r\n  </div>"
@@ -516,14 +516,14 @@ categories.push({
 			title: "card-img-bottom",
 			code: "<div class=\"card\">"
 			+"\r\n  <div class=\"card-body\"> Some more card content </div>"
-			+"\r\n  <img class=\"card-img-bottom\" src=\"/images/pathToYourImage.png\" alt=\"Card image cap\">"
+			+"\r\n  <img class=\"card-img-bottom\" src=\"/assets/img-cap.png\" alt=\"Card image cap\">"
 			+"\r\n</div>"
 		},
 
 		{
 			title: "card-img-overlay",
 			code: "<div class=\"card\">"
-			+"\r\n  <img class=\"card-img\" src=\"/images/pathToYourImage.png\" alt=\"Card image\">"
+			+"\r\n  <img class=\"card-img\" src=\"/assets/img-cap.png\" alt=\"Card image\">"
 			+"\r\n  <div class=\"card-img-overlay\">"
 			+"\r\n    <p class=\"card-text\">I'm text that has a background image!</p>"
 			+"\r\n  </div>"
@@ -1524,12 +1524,12 @@ categories.push({
 	items: [
 		{
 			title: "img-fluid",
-			code: "<img src=\"/images/pathToYourImage.png\" class=\"img-fluid\" alt=\"Responsive image\">"
+			code: "<img src=\"/assets/img-cap.png\" class=\"img-fluid\" alt=\"Responsive image\">"
 		},
 
 		{
 			title: "img-thumbnail",
-			code: "<img class=\"img-thumbnail\" src=\"/images/pathToYourImage.png\" alt=\"Thumbnail image\">"
+			code: "<img class=\"img-thumbnail\" src=\"/assets/img-cap.png\" alt=\"Thumbnail image\">"
 		}
 	]
 });
@@ -1716,7 +1716,7 @@ categories.push({
 		{
 			title: "media",
 			code: "<div class=\"media\">"
-			+"\r\n  <img class=\"d-flex mr-3\" data-src=\"holder.js/64x64?theme=sky\" alt=\"64x64\" src=\"data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2264%22%20height%3D%2264%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_1673c6a1613%20text%20%7B%20fill%3A%23FFFFFF%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A10pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1673c6a1613%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20fill%3D%22%230D8FDB%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2213.1796875%22%20y%3D%2236.5%22%3E64x64%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E\" data-holder-rendered=\"true\" style=\"width: 64px; height: 64px;\">"
+			+"\r\n  <img class=\"mr-3\" src=\"/assets/img-cap-64x64.png\" >"
 			+"\r\n  <div class=\"media-body\">"
 			+"\r\n    <h5 class=\"mt-0\">Media heading</h5>"
 			+"\r\n    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus."
@@ -1727,14 +1727,14 @@ categories.push({
 		{
 			title: "nested media",
 			code: "<div class=\"media\">"
-			+"\r\n  <img class=\"d-flex mr-3\" src=\"/images/pathToYourImage.png\" alt=\"Generic placeholder image\">"
+			+"\r\n  <img class=\"d-flex mr-3\" src=\"/assets/img-cap-64x64.png\" alt=\"Generic placeholder image\">"
 			+"\r\n  <div class=\"media-body\">"
 			+"\r\n    <h5 class=\"mt-0\">Media heading</h5>"
 			+"\r\n    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus."
 			+"\r\n"
 			+"\r\n    <div class=\"media mt-3\">"
 			+"\r\n      <a class=\"d-flex pr-3\" href=\"#!\">"
-			+"\r\n        <img src=\"/images/pathToYourImage.png\" alt=\"Generic placeholder image\">"
+			+"\r\n        <img src=\"/assets/img-cap-64x64.png\" alt=\"Generic placeholder image\">"
 			+"\r\n      </a>"
 			+"\r\n      <div class=\"media-body\">"
 			+"\r\n        <h5 class=\"mt-0\">Media heading</h5>"
@@ -1748,7 +1748,7 @@ categories.push({
 		{
 			title: "d-flex align-self-start",
 			code: "<div class=\"media\">"
-			+"\r\n  <img class=\"d-flex align-self-start mr-3\" src=\"/images/pathToYourImage.png\" alt=\"Generic placeholder image\">"
+			+"\r\n  <img class=\"d-flex align-self-start mr-3\" src=\"/assets/img-cap-64x64.png\" alt=\"Generic placeholder image\">"
 			+"\r\n  <div class=\"media-body\">"
 			+"\r\n    <h5 class=\"mt-0\">Top-aligned media</h5>"
 			+"\r\n    <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>"
@@ -1760,7 +1760,7 @@ categories.push({
 		{
 			title: "d-flex align-self-center",
 			code: "<div class=\"media\">"
-			+"\r\n  <img class=\"d-flex align-self-center mr-3\" src=\"/images/pathToYourImage.png\" alt=\"Generic placeholder image\">"
+			+"\r\n  <img class=\"d-flex align-self-center mr-3\" src=\"/assets/img-cap-64x64.png\" alt=\"Generic placeholder image\">"
 			+"\r\n  <div class=\"media-body\">"
 			+"\r\n    <h5 class=\"mt-0\">Center-aligned media</h5>"
 			+"\r\n    <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>"
@@ -1772,7 +1772,7 @@ categories.push({
 		{
 			title: "d-flex align-self-end",
 			code: "<div class=\"media\">"
-			+"\r\n  <img class=\"d-flex align-self-end mr-3\" src=\"/images/pathToYourImage.png\" alt=\"Generic placeholder image\">"
+			+"\r\n  <img class=\"d-flex align-self-end mr-3\" src=\"/assets/img-cap-64x64.png\" alt=\"Generic placeholder image\">"
 			+"\r\n  <div class=\"media-body\">"
 			+"\r\n    <h5 class=\"mt-0\">Bottom-aligned media</h5>"
 			+"\r\n    <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>"
@@ -1788,7 +1788,7 @@ categories.push({
 			+"\r\n    <h5 class=\"mt-0 mb-1\">Media object</h5>"
 			+"\r\n    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus."
 			+"\r\n  </div>"
-			+"\r\n  <img class=\"d-flex ml-3\" src=\"/images/pathToYourImage.png\" alt=\"Generic placeholder image\">"
+			+"\r\n  <img class=\"d-flex ml-3\" src=\"/assets/img-cap-64x64.png\" alt=\"Generic placeholder image\">"
 			+"\r\n</div>"
 		}
 	]
@@ -3145,20 +3145,20 @@ categories.push({
 
 		{
 			title: "rounded",
-			code: "<img class=\"rounded\" src=\"/images/pathToYourImage.png\" alt=\"Rounded image\">"
+			code: "<img class=\"rounded\" src=\"/assets/img-cap.png\" alt=\"Rounded image\">"
 		},
 
 		{
 			title: "rounded-circle",
-			code: "<img class=\"rounded-circle\" src=\"/images/pathToYourImage.png\" alt=\"Circle image\">"
+			code: "<img class=\"rounded-circle\" src=\"/assets/img-cap.png\" alt=\"Circle image\">"
 		},
 
 		{
 			title: "rounded-*",
-			code: "<img class=\"rounded-top\" src=\"/images/pathToYourImage.png\" alt=\"Circle image\">"
-			+"\r\n<img class=\"rounded-right\" src=\"/images/pathToYourImage.png\" alt=\"Circle image\">"
-			+"\r\n<img class=\"rounded-bottom\" src=\"/images/pathToYourImage.png\" alt=\"Circle image\">"
-			+"\r\n<img class=\"rounded-left\" src=\"/images/pathToYourImage.png\" alt=\"Circle image\">"
+			code: "<img class=\"rounded-top\" src=\"/assets/img-cap.png\" alt=\"Circle image\">"
+			+"\r\n<img class=\"rounded-right\" src=\"/assets/img-cap.png\" alt=\"Circle image\">"
+			+"\r\n<img class=\"rounded-bottom\" src=\"/assets/img-cap.png\" alt=\"Circle image\">"
+			+"\r\n<img class=\"rounded-left\" src=\"/assets/img-cap.png\" alt=\"Circle image\">"
 		}
 	]
 });

@@ -1,7 +1,7 @@
 let searchField = document.getElementById('search-field');
 let searchItems = document.getElementById('search-items');
 let categoryList = document.getElementById('list');
-let preview = document.getElementById('preview');
+let preview = document.getElementById('preview-area');
 
 var searchResult = [];
 
