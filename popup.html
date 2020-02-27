@@ -1,29 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<title>Bootstrap Cheatsheet by themefisher</title>
-	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
 	<script type="text/javascript" src="assets/bootstrap/jquery.min.js"></script>
 	<script type="text/javascript" src="assets/bootstrap/proper.min.js"></script>
 	<script type="text/javascript" src="assets/bootstrap/bootstrap.min.js"></script>
 </head>
+
 <body>
-	<div id="root">
-		<div class="search-area">
-			<input class="search-input" id="search-field" placeholder="Search">
-			<div id="search-items" class="hide">
+
+	<section class="main-wrapper">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-5">
+					<div id="root">
+						<div class="search-area">
+							<input class="search-input form-control" id="search-field" placeholder="Search here ...">
+							<img src="assets/search.png" class="search-icon" alt="">
+							<div id="search-items" class="hide"></div>
+						</div>
+						<div id="list"></div>
+					</div>
+				</div>
+				<div class="col-7">
+					<div id="preview">
+						<h2 class="text-center tf-bs-heading">Element Preview</h2>
+						<div id="preview-area">
+							<div class="text-center p-4">
+								<h4 class="text-danger">Bootstrap v4.4</h4>
+								<p>Powered by <a target="_blank" class="text-primary" href="https://themefisher.com">Themefisher</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
-		<div id="list">
-		</div>
-	</div>
-	<div id="preview">
-		<h2 class="text-center">Element Preview</h2>
-		<div id="preview-area"></div>
-	</div>
-	
+	</section>
+
 </body>
 <script type="text/javascript" src="data.js"></script>
 <script type="text/javascript" src="popup.js"></script>
