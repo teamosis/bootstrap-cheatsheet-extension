@@ -1,6 +1,38 @@
 var categories = [];
 
 categories.push({
+	title: "starter template",
+	items: [{
+		title: "starter template",
+		code: "<!doctype html>" +
+			"\r\n<html lang=\"en\">" +
+			"\r\n<head>" +
+			"\r\n<!-- Required meta tags -->" +
+			"\r\n<meta charset=\"utf-8\">" +
+			"\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">"
+
+			+
+			"\r\n<!-- Bootstrap CSS -->" +
+			"\r\n<link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\" integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\">"
+
+			+
+			"\r\n<title>Hello, world!</title>" +
+			"\r\n</head>" +
+			"\r\n<body>" +
+			"\r\n<h1>Hello, world!</h1>"
+
+			+
+			"\r\n<!-- Optional JavaScript -->" +
+			"\r\n<!-- jQuery first, then Popper.js, then Bootstrap JS -->" +
+			"\r\n<script src=\"https://code.jquery.com/jquery-3.4.1.slim.min.js\" integrity=\"sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n\" crossorigin=\"anonymous\"></script>" +
+			"\r\n<script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js\" integrity=\"sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo\" crossorigin=\"anonymous\"></script>" +
+			"\r\n<script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js\" integrity=\"sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6\" crossorigin=\"anonymous\"></script>" +
+			"\r\n</body>" +
+			"\r\n</html>"
+	}]
+})
+
+categories.push({
 	title: "alerts",
 	items: [{
 			title: "alert-primary",
